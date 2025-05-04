@@ -1,14 +1,7 @@
-<template>
-  <div class="max-w-2xl mx-auto">
-    <!-- Mobile Header for Feed Page -->
-    <div class="lg:hidden flex items-center justify-between p-4 mb-4">
-      <div class="w-32">
-        <Logo />
-      </div>
-      <button @click="openPostModal" class="p-2 text-primary dark:text-primary-light">
-        <edit-icon class="h-6 w-6" />
-      </button>
-    </div>
+<template >
+  <Navbar />
+  <div class="lg:ml-64 p-4">
+  <div class="max-w-2xl mx-auto ">
     <div class="bg-white dark:bg-gray-800 rounded-lg shadow mb-6 p-4">
       <div class="flex items-center">
         <img src="https://i.pravatar.cc/150?img=11" alt="Profile" class="h-10 w-10 rounded-full mr-3" />
@@ -130,6 +123,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script setup>
@@ -147,6 +141,7 @@ import {
   ShareIcon,
   Edit as EditIcon
 } from 'lucide-vue-next';
+import Navbar from './Navbar.vue';
 
 const showPostModal = inject('showPostModal');
 

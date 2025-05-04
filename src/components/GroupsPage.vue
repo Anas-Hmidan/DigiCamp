@@ -1,4 +1,6 @@
 <template>
+  <Navbar />
+  <div class="lg:ml-64 p-4">
   <div class="max-w-2xl mx-auto">
     <!-- Mobile Header for Groups Page -->
     <div class="lg:hidden flex items-center justify-between p-4 mb-4">
@@ -56,6 +58,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script setup>
@@ -64,7 +67,7 @@ import {
   PlusIcon, 
   ChevronRightIcon 
 } from 'lucide-vue-next';
-
+import Navbar from './Navbar.vue';
 // Groups data
 const groups = ref([
   {

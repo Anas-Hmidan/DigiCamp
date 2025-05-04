@@ -9,20 +9,24 @@ import GroupsPage from "./components/GroupsPage.vue"
 import SettingsPage from "./components/SettingsPage.vue"
 import MessagesPage from "./components/MessagesPage.vue"
 import Home from "./components/home2.vue"
+import LoginPage from "./components/LoginPage.vue"
+import RegisterPage from "./components/RegisterPage.vue"
 import "./assets/main.css"
 
 // Create router instance
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", component: FeedPage },
+    { path: "/", component: Home },
     { path: "/profile", component: ProfilePage },
     { path: "/notifications", component: NotificationsPage },
     { path: "/events", component: EventsPage },
     { path: "/groups", component: GroupsPage },
     { path: "/settings", component: SettingsPage },
     { path: "/messages", component: MessagesPage },
-    { path: "/home", component: Home },
+    { path: "/home", component: FeedPage },
+    { path: "/login", component: LoginPage },
+    { path: "/register", component: RegisterPage },
   ],
 })
 

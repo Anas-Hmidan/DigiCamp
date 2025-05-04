@@ -500,28 +500,32 @@
     <!-- User Type Modal -->
     <div v-if="showUserTypeModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] backdrop-blur-sm">
       <div class="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full mx-4 animate-fadeIn">
+        <button 
+      @click="showUserTypeModal = false" 
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors"
+    >
+      <X class="h-6 w-6" />
+    </button>
         <div class="text-center mb-6">
           <GraduationCap class="h-16 w-16 text-iset-blue mx-auto mb-4" />
           <h2 class="text-2xl font-semibold text-gray-800">Welcome to ISET Djerba</h2>
           <p class="text-gray-600 mt-2">Please select how you would like to continue</p>
         </div>
         
-        <div class="space-y-4">
-          <button 
-            @click="handleUserTypeSelection('register')"
+        <div class="space-y-4"> 
+          <router-link to="/register"
             class="w-full bg-iset-blue hover:bg-iset-blue/90 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors"
           >
             <UserPlus class="h-5 w-5" />
             Register as a Student
-          </button>
+          </router-link>
           
-          <button 
-            @click="handleUserTypeSelection('login')"
+          <router-link to="/login"
             class="w-full bg-iset-orange hover:bg-iset-orange/90 text-white py-3 rounded-lg flex items-center justify-center gap-2 transition-colors"
           >
             <LogIn class="h-5 w-5" />
             Login to Student Account
-          </button>
+          </router-link>
           
           <button 
             @click="handleUserTypeSelection('visitor')"
@@ -1011,20 +1015,8 @@ const generateBotResponse = (message) => {
 // User type modal functions
 const handleUserTypeSelection = (type) => {
   showUserTypeModal.value = false;
-  
-  // In a real implementation, you would redirect to the appropriate page
-  console.log(`User selected: ${type}`);
-  
-  if (type === 'register') {
-    // Redirect to registration page
-    console.log('Redirecting to registration page...');
-  } else if (type === 'login') {
-    // Redirect to login page
-    console.log('Redirecting to login page...');
-  } else {
-    // Continue as visitor
     console.log('Continuing as visitor...');
-  }
+  
 };
 
 // Initialize everything on mount

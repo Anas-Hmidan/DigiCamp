@@ -1,4 +1,6 @@
 <template>
+  <Navbar />
+  <div class="lg:ml-64 p-4">
   <div class="max-w-4xl mx-auto">
     <div class="bg-white dark:bg-gray-800 rounded-lg shadow flex h-[600px]">
       <!-- Conversations List -->
@@ -123,6 +125,7 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script setup>
@@ -138,7 +141,7 @@ import {
   SmileIcon, 
   SendIcon 
 } from 'lucide-vue-next';
-
+import Navbar from './Navbar.vue';
 // Active conversation
 const activeConversation = ref(1);
 

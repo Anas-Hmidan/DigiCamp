@@ -1,4 +1,6 @@
 <template>
+  <Navbar />
+  <div class="lg:ml-64 p-4">
   <div class="max-w-2xl mx-auto">
     <div class="bg-white dark:bg-gray-800 rounded-lg shadow">
       <div class="p-4 border-b dark:border-gray-700">
@@ -204,11 +206,12 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script setup>
 import { ref, inject } from 'vue';
-
+import Navbar from './Navbar.vue';
 // Settings tab state
 const settingsTab = ref('general');
 

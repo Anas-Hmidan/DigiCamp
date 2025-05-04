@@ -48,10 +48,7 @@
             <p class="font-medium dark:text-white">Alex Johnson</p>
             <p class="text-sm text-gray-500 dark:text-gray-400">Computer Science</p>
           </div>
-          <button @click="toggleTheme" class="ml-auto p-2 text-gray-700 dark:text-gray-300">
-            <sun-icon v-if="darkMode" class="h-5 w-5" />
-            <moon-icon v-else class="h-5 w-5" />
-          </button>
+          
         </div>
       </div>
     </aside>
